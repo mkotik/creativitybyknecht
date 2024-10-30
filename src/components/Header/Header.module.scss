@@ -1,0 +1,48 @@
+.header {
+  background-color: var(--mantine-color-body);
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.burger {
+  display: none;
+
+  @media (max-width: 48em) {
+    display: block;
+  }
+}
+
+.link {
+  color: var(--mantine-color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--mantine-primary-color-filled);
+  }
+}
+
+.links {
+  @media (max-width: 48em) {
+    display: none;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-color: var(--mantine-color-body);
+  padding: 1rem;
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  display: none;
+
+  @media (max-width: 48em) {
+    display: block;
+  }
+}
