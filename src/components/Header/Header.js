@@ -18,7 +18,7 @@ function Header() {
         behavior: "smooth",
       });
 
-      close(); // Close mobile menu after clicking
+      close();
     }
   };
 
@@ -41,14 +41,16 @@ function Header() {
   ));
 
   return (
-    <header className={classes.header}>
+    <header
+      className={`${classes.header} ${opened ? classes.headerOpened : ""}`}
+    >
       <Container size="lg">
         <Group justify="space-between" h="60px">
-          <Text size="xl" fw={700}>
+          <Text size="xl" fw={700} className={classes.logo}>
             Jane Doe
           </Text>
 
-          <Group gap={30} className={classes.links}>
+          <Group gap={30} className={classes.links} visibleFrom="sm">
             {items}
           </Group>
 
@@ -57,11 +59,12 @@ function Header() {
             onClick={toggle}
             className={classes.burger}
             size="sm"
+            hiddenFrom="sm"
           />
         </Group>
-      </Container>
 
-      {opened && <div className={classes.dropdown}>{items}</div>}
+        {opened && <div className={classes.dropdown}>{items}</div>}
+      </Container>
     </header>
   );
 }
