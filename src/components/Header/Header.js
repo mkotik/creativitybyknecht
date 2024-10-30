@@ -1,51 +1,68 @@
-import { useState } from "react";
-import { Group, Text, Container, Flex, Burger, Collapse } from "@mantine/core";
+import { Container, Group, Burger, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.scss";
 
 function Header() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
 
-  const navItems = [
-    { label: "About", link: "#" },
-    { label: "Services", link: "#" },
-    { label: "Clients", link: "#" },
-    { label: "Testimonials", link: "#" },
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 60;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
+      close(); // Close mobile menu after clicking
+    }
+  };
+
+  const links = [
+    { label: "Home", link: "home" },
+    { label: "About", link: "about" },
+    { label: "Services", link: "services" },
+    { label: "Testimonials", link: "testimonials" },
+    { label: "Contact", link: "contact" },
   ];
 
-  const items = navItems.map((item) => (
+  const items = links.map((link) => (
     <Text
-      key={item.label}
-      component="a"
-      href={item.link}
+      key={link.label}
       className={classes.link}
+      onClick={() => scrollToSection(link.link)}
     >
-      {item.label}
+      {link.label}
     </Text>
   ));
 
   return (
-    <Container fluid className={classes.header}>
-      <Flex justify="space-between" align="center" h={60} px="md">
-        <Text size="xl" fw={700}>
-          CK
-        </Text>
+    <header className={classes.header}>
+      <Container size="lg">
+        <Group justify="space-between" h="60px">
+          <Text size="xl" fw={700}>
+            Jane Doe
+          </Text>
 
-        <Group gap={40} visibleFrom="sm">
-          {items}
-        </Group>
-
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-      </Flex>
-
-      <Collapse in={opened}>
-        <Container fluid className={classes.dropdown}>
-          <Flex direction="column" gap="lg">
+          <Group gap={30} className={classes.links}>
             {items}
-          </Flex>
-        </Container>
-      </Collapse>
-    </Container>
+          </Group>
+
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            className={classes.burger}
+            size="sm"
+          />
+        </Group>
+      </Container>
+
+      {opened && <div className={classes.dropdown}>{items}</div>}
+    </header>
   );
 }
 

@@ -1,0 +1,27 @@
+.footer {
+  border-top: 1px solid var(--mantine-color-dark-4);
+  padding: 40px 0;
+}
+
+.inner {
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.social {
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
+}
+
+.socialIcon {
+  color: var(--mantine-color-dimmed);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--mantine-color-white);
+  }
+}

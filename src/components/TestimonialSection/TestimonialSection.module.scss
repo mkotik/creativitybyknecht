@@ -1,0 +1,26 @@
+.wrapper {
+  padding: 120px 0;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 40px;
+  background-color: var(--mantine-color-dark-6);
+  height: 100%;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
