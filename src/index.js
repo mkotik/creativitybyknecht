@@ -10,7 +10,6 @@ const theme = createTheme({
   primaryColor: "blue",
   defaultRadius: "md",
   fontFamily: "Montserrat, sans-serif",
-  defaultRadius: "md",
   headings: {
     fontFamily: "Verdana, sans-serif",
   },

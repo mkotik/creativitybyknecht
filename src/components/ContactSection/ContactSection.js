@@ -1,4 +1,4 @@
-import { Title, Text, Container, Group, Stack } from "@mantine/core";
+import { Title, Text, Container, Stack } from "@mantine/core";
 import classes from "./ContactSection.module.scss";
 
 function ContactSection() {
