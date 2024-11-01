@@ -75,11 +75,7 @@ const Carousel = () => {
       ospin.style.animationPlayState = yes ? "running" : "paused";
     }
 
-    var sX,
-      sY,
-      nX,
-      nY,
-      desX = 0,
+    var desX = 0,
       desY = 0,
       tX = 0,
       tY = 10;
