@@ -36,7 +36,7 @@ const theme = createTheme({
   },
 });
 root.render(
-  <MantineProvider theme={theme} defaultColorScheme="dark">
+  <MantineProvider theme={theme}>
     <App />
   </MantineProvider>
 );
