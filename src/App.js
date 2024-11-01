@@ -8,11 +8,13 @@ import OfferSection from "./components/OfferSection/OfferSection";
 import TestimonialSection from "./components/TestimonialSection/TestimonialSection";
 import ContactSection from "./components/ContactSection/ContactSection";
 import Footer from "./components/Footer/Footer";
+import ScrollPage from "./components/ScrollPage/ScrollPage";
 
 function App() {
   return (
     <Box>
-      <Header />
+      <ScrollPage />
+      {/* <Header />
       <div id="home">
         <MainSection />
       </div>
@@ -28,7 +30,7 @@ function App() {
       <div id="contact">
         <ContactSection />
       </div>
-      <Footer />
+      <Footer /> */}
     </Box>
   );
 }
