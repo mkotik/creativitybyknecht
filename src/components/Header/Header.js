@@ -44,7 +44,7 @@ function Header() {
     <header
       className={`${classes.header} ${opened ? classes.headerOpened : ""}`}
     >
-      <Container size="lg">
+      <Container size="lg" px={{ base: "md", sm: "lg" }}>
         <Group justify="space-between" h="60px">
           <Text size="xl" fw={700} className={classes.logo}>
             Jane Doe
@@ -62,7 +62,6 @@ function Header() {
             hiddenFrom="sm"
           />
         </Group>
-
         {opened && <div className={classes.dropdown}>{items}</div>}
       </Container>
     </header>

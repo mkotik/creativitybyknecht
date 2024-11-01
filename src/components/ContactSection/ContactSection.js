@@ -10,7 +10,7 @@ function ContactSection() {
         </Title>
 
         <div className={classes.content}>
-          <Stack gap="lg">
+          <Stack gap="lg" className={classes.content}>
             <div>
               <Title order={2} size="h3">
                 Collaborate
@@ -38,7 +38,7 @@ function ContactSection() {
         </Title>
 
         <div className={classes.content}>
-          <Stack gap="lg">
+          <Stack gap="lg" className={classes.content}>
             <div>
               <Title order={2} size="h3">
                 Los Angeles

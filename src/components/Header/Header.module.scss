@@ -4,6 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .burger {
@@ -33,16 +34,14 @@
 }
 
 .dropdown {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 999;
   background-color: var(--mantine-color-body);
-  padding: 1rem;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--mantine-color-gray-3);
   display: none;
   text-align: center;
+  margin: 0 calc(var(--mantine-spacing-md) * -1);
 
   @media (max-width: 48em) {
     display: flex;
