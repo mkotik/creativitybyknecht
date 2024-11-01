@@ -8,10 +8,10 @@ function MainSection() {
       <div className={classes.content}>
         <div className={classes.textContent}>
           <div>
-            <Title order={1} size={72} className={classes.title}>
+            <Title order={1} className={classes.title}>
               Creative Marketing
             </Title>
-            <Title order={1} size={72} c="violet" className={classes.title}>
+            <Title order={1} c="violet" className={classes.title}>
               Design Solutions
             </Title>
           </div>
