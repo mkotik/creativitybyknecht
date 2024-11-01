@@ -15,7 +15,7 @@ function OfferSection() {
         "Design eye-catching brochures, flyers, and other print materials that effectively communicate your message.",
     },
     {
-      title: "Social Media Graphics",
+      title: " Social Media Graphics",
       description:
         "Develop engaging visual content for your social media platforms to increase engagement and brand awareness.",
     },
