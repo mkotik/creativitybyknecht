@@ -1,8 +1,35 @@
 import { Title, Text, Container, Stack, Button } from "@mantine/core";
+// import { Carousel } from "@mantine/carousel";
+// import Carousel from "react-multi-carousel";
+import Carousel from "./Carousel";
+import "react-multi-carousel/lib/styles.css";
 import classes from "./MeetSection.module.scss";
-import placeholderImage from "../../assets/placeholder.jpg";
+import rachel1 from "../../assets/rachel1.png";
+import rachel2 from "../../assets/rachel2.png";
+import rachel3 from "../../assets/rachel3.png";
+import rachel4 from "../../assets/rachel4.png";
 
 function MeetSection() {
+  const images = [rachel1, rachel2, rachel3, rachel4];
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <Container size="lg" className={classes.wrapper}>
       <Stack align="center" gap={30} className={classes.header}>
@@ -19,20 +46,12 @@ function MeetSection() {
       </Stack>
 
       <div className={classes.content}>
-        <div className={classes.imageWrapper}>
-          <img
-            src={placeholderImage}
-            alt="Designer portrait"
-            width={500}
-            height={500}
-          />
-        </div>
-
+        <Carousel />
         <div className={classes.textContent}>
           <Title order={2} size={36} mb={30}>
             Rachel Knecht
           </Title>
-          <Stack gap={30}>
+          <Stack gap={30} className={classes.summary}>
             <Text size="lg">
               As a graduate of the Fashion Institute of Technology’s prestigious
               Advertising & Marketing Communications program and a passion for

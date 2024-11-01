@@ -16,7 +16,7 @@
 }
 
 .stack {
-  display: contents;
+  display: contents !important;
 
   @media (min-width: 900px) {
     flex-direction: row !important;

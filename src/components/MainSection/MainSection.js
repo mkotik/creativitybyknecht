@@ -11,7 +11,13 @@ function MainSection() {
             <Title order={1} className={classes.title}>
               Welcome to Creativity by Knecht
             </Title>
-            <Title order={1} c="violet" size="xl" className={classes.title}>
+            <Title
+              order={1}
+              c="violet"
+              size="xl"
+              className={classes.title}
+              style={{ marginTop: "20px" }}
+            >
               "I make emails you ACTUALLY want to open."
             </Title>
           </div>
