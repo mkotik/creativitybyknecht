@@ -3,6 +3,11 @@ import "./scrollpage.css";
 const ScrollPage = () => {
   return (
     <div>
+      <style>{`
+        body {
+          background-color: #000000;
+        }
+      `}</style>
       <header className="site-header">
         <div className="fieldset-wrapper">
           <fieldset>

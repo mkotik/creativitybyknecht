@@ -784,32 +784,32 @@ h2 {
 section:nth-child(1) {
   --color-highlight: var(--color-primary);
   --color-selector: var(--color-secondary);
-  --image: url("https://assets.codepen.io/197359/flower-white.png");
+  /* --image: url("https://assets.codepen.io/197359/flower-white.png"); */
 }
 
 section:nth-child(2) {
   --color-highlight: var(--color-yellow);
   --color-selector: var(--color-green);
-  --image: url("https://assets.codepen.io/197359/flower-yellow.png");
+  /* --image: url("https://assets.codepen.io/197359/flower-yellow.png"); */
   --margin-top: 10dvi;
 }
 
 section:nth-child(3) {
   --color-highlight: var(--color-secondary);
   --color-selector: var(--color-primary);
-  --image: url("https://assets.codepen.io/197359/flower-blue.png");
+  /* --image: url("https://assets.codepen.io/197359/flower-blue.png"); */
 }
 
 section:nth-child(4) {
   --color-highlight: var(--color-red);
   --color-selector: var(--color-green-2);
-  --image: url("https://assets.codepen.io/197359/flower-red.png");
+  /* --image: url("https://assets.codepen.io/197359/flower-red.png"); */
 }
 
 section:nth-child(5) {
   --color-highlight: var(--color-purple);
   --color-selector: var(--color-red-2);
-  --image: url("https://assets.codepen.io/197359/flower-purple.png");
+  /* --image: url("https://assets.cwodepen.io/197359/flower-purple.png"); */
   --margin-top: 10dvi;
 }
 
@@ -1010,5 +1010,20 @@ body:has([value="zoom-scroll"]:checked) .content {
     transform: scale(1.5);
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+@supports not (animation-timeline: scroll()) {
+  .content {
+    /* Fallback styles */
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    filter: none;
+    animation: none;
+  }
+
+  body {
+    background-color: black !important; /* Force black background */
   }
 }
