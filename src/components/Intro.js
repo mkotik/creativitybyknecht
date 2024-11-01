@@ -202,10 +202,7 @@ const Intro = ({ ratio, isStuck }) => {
         <h2 className="introText" style={introTextStyle}>
           {makeInvisibleText(["I ", "AM ", "A "])}
           <div className="marker" ref={roleText} />
-          {makeVisibleText(
-            ["GRAPHIC ", "DESIGNER ", "DEVE&shy;LOPER."],
-            "roleSection"
-          )}
+          {makeVisibleText(["GRAPHIC ", "DESIGNER."], "roleSection")}
         </h2>
       </div>
       <div
