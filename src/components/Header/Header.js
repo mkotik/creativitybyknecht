@@ -23,7 +23,6 @@ function Header() {
   };
 
   const links = [
-    { label: "Home", link: "home" },
     { label: "About", link: "about" },
     { label: "Services", link: "services" },
     { label: "Testimonials", link: "testimonials" },
@@ -46,8 +45,8 @@ function Header() {
     >
       <Container size="lg" px={{ base: "md", sm: "lg" }}>
         <Group justify="space-between" h="60px">
-          <Text size="xl" fw={700} className={classes.logo}>
-            Jane Doe
+          <Text size="lg" fw={700} className={classes.logo}>
+            CK
           </Text>
 
           <Group gap={30} className={classes.links} visibleFrom="sm">

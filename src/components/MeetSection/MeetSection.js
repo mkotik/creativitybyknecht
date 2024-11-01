@@ -1,4 +1,4 @@
-import { Title, Text, Container, Stack } from "@mantine/core";
+import { Title, Text, Container, Stack, Button } from "@mantine/core";
 import classes from "./MeetSection.module.scss";
 import placeholderImage from "../../assets/placeholder.jpg";
 
@@ -30,20 +30,44 @@ function MeetSection() {
 
         <div className={classes.textContent}>
           <Title order={2} size={36} mb={30}>
-            Jane Doe
+            Rachel Knecht
           </Title>
           <Stack gap={30}>
             <Text size="lg">
-              I'm passionate about creating designs that not only look great but
-              also drive results for my clients. Whether you're a small startup
-              or a large corporation, I'm here to help you stand out in today's
-              competitive market.
+              As a graduate of the Fashion Institute of Technology’s prestigious
+              Advertising & Marketing Communications program and a passion for
+              the sport of bodybuilding, it was only right for me to combine the
+              two.
             </Text>
             <Text size="lg">
-              My approach combines creative flair with data-driven insights to
-              ensure that every design serves a purpose and resonates with your
-              target audience.
+              Over the last 4 years since graduation, I’ve built a clientele of
+              both small and large businesses in the fitness space. Working with
+              both top brands and athletes, I’ve learned a lot of the ins and
+              outs of the sport while continuing to grow my skill set in
+              marketing.
             </Text>
+            <Text size="lg">
+              I have transitioned from the typical 9-to-5 office job into my own
+              consulting business “Creativity by Knecht” to manage my clients
+              and take on an array of short-term and long-term projects to keep
+              me inspired
+            </Text>
+            <Text size="lg">
+              From social media management, to website design, logos and
+              graphics, affiliate marketing and athlete management, to my
+              personal favorite - email marketing… you name it, and I can do it!
+              Hence, why “Creativity” is the perfect name to classify me and my
+              various services.
+            </Text>
+            <Button
+              size="lg"
+              variant="filled"
+              color="violet"
+              radius="md"
+              className={classes.button}
+            >
+              Let's 'Kin ɛçt'
+            </Button>
           </Stack>
         </div>
       </div>

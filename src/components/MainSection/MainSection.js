@@ -1,6 +1,6 @@
 import { Title, Text, Button, Container } from "@mantine/core";
 import classes from "./MainSection.module.scss";
-import placeholderImage from "../../assets/placeholder.jpg"; // Add your image here
+import rachelImage from "../../assets/rachel_fullbody.png"; // Add your image here
 
 function MainSection() {
   return (
@@ -9,16 +9,26 @@ function MainSection() {
         <div className={classes.textContent}>
           <div>
             <Title order={1} className={classes.title}>
-              Creative Marketing
+              Welcome to Creativity by Knecht
             </Title>
-            <Title order={1} c="violet" className={classes.title}>
-              Design Solutions
+            <Title order={1} c="violet" size="xl" className={classes.title}>
+              "I make emails you ACTUALLY want to open."
             </Title>
           </div>
 
           <Text size="xl" c="dimmed" className={classes.description}>
-            Elevate your brand with stunning visuals and strategic marketing
-            design. Let's bring your vision to life.
+            Hi, my name is Rachel Knecht (kin-eçt) and I am so glad to have you
+            here!
+          </Text>
+
+          <Text size="xl" c="dimmed" className={classes.description}>
+            Are you looking for a fresh, new logo? Someone to design and manage
+            your email campaigns? Or, maybe you're ready for a whole RE-BRAND?!
+            You've come to the right place.
+          </Text>
+
+          <Text size="xl" c="dimmed" className={classes.description}>
+            Let's "kin eçt" and get creative!
           </Text>
 
           <Button
@@ -34,7 +44,7 @@ function MainSection() {
 
         <div className={classes.imageWrapper}>
           <img
-            src={placeholderImage}
+            src={rachelImage}
             alt="Creative design illustration"
             width={600}
             height={600}
