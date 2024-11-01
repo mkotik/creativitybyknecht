@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100vh;
+}
+
+.scroll-container {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100dvh;
+}
+
+.scroll-section {
+  height: 100dvh;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.section-1 {
+  background-color: red;
+}
+
+.section-2 {
+  background-color: blue;
+}
+.section-3 {
+  background-color: green;
+}
+
+.section-4 {
+  background-color: yellow;
+}
+
+.section-5 {
+  background-color: purple;
+}
+
+body {
+  margin: 0;
+}
