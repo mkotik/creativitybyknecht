@@ -8,29 +8,11 @@ import "./App.scss";
 // import TestimonialSection from "./components/TestimonialSection/TestimonialSection";
 // import ContactSection from "./components/ContactSection/ContactSection";
 // import Footer from "./components/Footer/Footer";
-import ScrollPage from "./components/ScrollPage/ScrollPage";
-
+import Hero from "./components/Hero";
 function App() {
   return (
     <Box>
-      <ScrollPage />
-      {/* <Header />
-      <div id="home">
-        <MainSection />
-      </div>
-      <div id="about">
-        <MeetSection />
-      </div>
-      <div id="services">
-        <OfferSection />
-      </div>
-      <div id="testimonials">
-        <TestimonialSection />
-      </div>
-      <div id="contact">
-        <ContactSection />
-      </div>
-      <Footer /> */}
+      <Hero />
     </Box>
   );
 }
