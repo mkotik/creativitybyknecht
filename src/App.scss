@@ -3,10 +3,56 @@ body {
   height: 100vh;
 }
 
+h1,
+p {
+  margin: 0;
+}
+
 .scroll-container {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   height: 100dvh;
+  .section-1 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 20px;
+    .text-static-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100dvh;
+      align-items: flex-end;
+    }
+    .text-static {
+      display: flex;
+      flex-direction: column;
+      font-size: 10rem;
+      margin-bottom: 300px;
+
+      span {
+        display: block;
+        line-height: 1;
+      }
+    }
+    .text-dynamic-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100dvh;
+      align-items: flex-end;
+    }
+    .text-dynamic {
+      display: flex;
+      flex-direction: column;
+      font-size: 10rem;
+      margin-bottom: 300px;
+      span {
+        display: block;
+        line-height: 1;
+      }
+    }
+  }
 }
 
 .scroll-section {
